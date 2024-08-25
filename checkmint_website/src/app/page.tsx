@@ -14,13 +14,15 @@ import {
 } from "../components/animatedButton";
 import { motion } from "framer-motion";
 
+// todo make a better hero than compare, too confusing
+
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "Intergration with Google Docs",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "The google chrome extension works with google Docs to allow you to see the number of edits the student made to see if it matchs with the diffculty of the assigment. Futher more, you can also see the time spent, the number of words copied from a exteral source and so much more.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(#F1F6F9),var(#394867))] flex items-center justify-center text-white">
         Collaborative Editing
       </div>
     ),
@@ -28,7 +30,7 @@ const content = [
   {
     title: "Real time changes",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "When you Click on the extension button, it will redirect you to a new page to get a more detailed look into the students writing process. You can see what the student copied and pasted, and determine if the student used Ai or not.",
     content: (
       <div className="flex items-center justify-center w-full h-full text-white">
         <Image
@@ -42,7 +44,7 @@ const content = [
     ),
   },
   {
-    title: "Version control",
+    title: "Customizable",
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
@@ -52,7 +54,17 @@ const content = [
     ),
   },
   {
-    title: "Running out of content",
+    title: "Secure and Safe",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Running out of content
+      </div>
+    ),
+  },
+  {
+    title: "Intergrated with cutting Edge Ai detection model",
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
@@ -65,7 +77,7 @@ const content = [
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="bg-[#F1F6F9] py-20">
       <div className="flex items-center justify-center h-[80vh]">
         <div className="flex flex-col items-center w-3/4 pb-2">
           <p className="pb-4 text-6xl black">A Chrome Extension for finding</p>
@@ -148,10 +160,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="flex items-center justify-center p-4 px-4">
         <Compare
-          firstImage="https://assets.aceternity.com/code-problem.png"
-          secondImage="https://assets.aceternity.com/code-solution.png"
+          firstImage="/checkminthero.png"
+          secondImage="/googledochero.png"
           firstImageClassName="object-cover object-left-top"
           secondImageClassname="object-cover object-left-top"
           className="h-[40vw] w-[60vw] md:h-[45vw] md:w-[80vw]"
@@ -159,7 +172,8 @@ export default function Home() {
           initialSliderPercentage={25}
         />
       </div>
-      <div className="overflow-y-scroll bg-white no-scrollbar">
+      <div className="overflow-y-scroll bg-[#F1F6F9] mt-11 no-scrollbar">
+        <h1 className="text-4xl">Features</h1>
         <StickyScroll content={content} />
       </div>
     </main>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -45,11 +45,15 @@ export const StickyScroll = ({
     "var(--black)",
     "var(--neutral-900)",
   ];
-  const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
-  ];
+
+  const linearGradients = useMemo(
+    () => [
+      "linear-gradient(to bottom right, #F1F6F9, #394867)",
+      "linear-gradient(to bottom right, #394867, #212A3E)",
+      "linear-gradient(to bottom right, #212A3E, #9BA4B5)",
+    ],
+    []
+  );
 
   const [backgroundGradient, setBackgroundGradient] = useState(
     linearGradients[0]
@@ -57,20 +61,20 @@ export const StickyScroll = ({
 
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+  }, [activeCard, linearGradients]);
 
   return (
     <motion.div
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
+      className="h-[30rem] no-scrollbar overflow-y-auto flex justify-center relative py-24 space-x-20 rounded-md"
       ref={ref}
     >
-      <div className="relative flex items-start px-4 div">
+      <div className="relative flex items-start px-4 py-12 div">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-12">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -89,7 +93,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="max-w-sm mt-10 text-kg text-slate-300"
+                className="max-w-sm mt-5 text-kg text-slate-300"
               >
                 {item.description}
               </motion.p>

@@ -1,10 +1,13 @@
 "use client";
+import Image from "next/image";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { SparklesCore } from "@/components/sparkles";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { IconDotsVertical } from "@tabler/icons-react";
 
+// todo add a width and a heigh var
+// make a live demo but hard codede
 interface CompareProps {
   firstImage?: string;
   secondImage?: string;
@@ -206,14 +209,17 @@ export const Compare = ({
               }}
               transition={{ duration: 0 }}
             >
-              <img
+              <Image
                 alt="first image"
                 src={firstImage}
+                width={1392}
+                height={754}
                 className={cn(
                   "absolute inset-0  z-20 rounded-2xl flex-shrink-0 w-full h-full select-none",
                   firstImageClassName
                 )}
                 draggable={false}
+                quality={100}
               />
             </motion.div>
           ) : null}
