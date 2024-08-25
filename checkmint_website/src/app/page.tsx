@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { MacbookScroll } from "../components/macbook";
 import { Compare } from "../components/compare";
+import { StickyScroll } from "../components/scroll-reveal";
 import React from "react";
 import {
   Modal,
@@ -13,14 +14,63 @@ import {
 } from "../components/animatedButton";
 import { motion } from "framer-motion";
 
+const content = [
+  {
+    title: "Collaborative Editing",
+    description:
+      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Collaborative Editing
+      </div>
+    ),
+  },
+  {
+    title: "Real time changes",
+    description:
+      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    content: (
+      <div className="flex items-center justify-center w-full h-full text-white">
+        <Image
+          src="/linear.webp"
+          width={300}
+          height={300}
+          className="object-cover w-full h-full"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Version control",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+        Version control
+      </div>
+    ),
+  },
+  {
+    title: "Running out of content",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Running out of content
+      </div>
+    ),
+  },
+];
+
 export default function Home() {
   return (
-    <main>
+    <main className="">
       <div className="flex items-center justify-center h-[80vh]">
         <div className="flex flex-col items-center w-3/4 pb-2">
-          <p className="pb-2 text-6xl black">A Chrome Extension for finding</p>
-          <p className="pb-3 text-7xl black">AI/Plagerism </p>
-          <p className="w-3/5 pb-2 text-lg text-center black text-wrap">
+          <p className="pb-4 text-6xl black">A Chrome Extension for finding</p>
+          <p className="pb-6 text-7xl black">AI/Plagerism </p>
+          <p className="w-4/5 pb-4 text-base text-center black text-wrap">
             See status like the number of edits made or the time spent on the
             google doc. Also be able to replay the students wiritng process
             while also seeing ANY text copied from an external source
@@ -108,6 +158,9 @@ export default function Home() {
           slideMode="hover"
           initialSliderPercentage={25}
         />
+      </div>
+      <div className="overflow-y-scroll bg-white no-scrollbar">
+        <StickyScroll content={content} />
       </div>
     </main>
   );
