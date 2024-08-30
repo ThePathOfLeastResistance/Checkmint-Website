@@ -18,9 +18,9 @@ import { motion } from "framer-motion";
 
 // todo make a better hero than compare, too confusing
 
-const content = [
+const statsContent = [
   {
-    title: "Intergration with Google Docs",
+    title: "Download the extension from the chrome store",
     description:
       "The google chrome extension works with google Docs to allow you to see the number of edits the student made to see if it matchs with the diffculty of the assigment. Futher more, you can also see the time spent, the number of words copied from a exteral source and so much more.",
     content: (
@@ -76,7 +76,71 @@ const content = [
     ),
   },
 ];
-
+const content = [
+  {
+    title: "Download the extension from the chrome store",
+    contentClassName: "py-[30vh]",
+    description:
+      "Head over to the google chrome store or click here to install the chrome extension",
+    content: (
+      <Image
+        src="/linear.webp"
+        width={300}
+        height={300}
+        className="object-cover w-full h-full"
+        alt="linear board demo"
+      />
+    ),
+  },
+  {
+    title: "Open Google Docs",
+    contentClassName: "py-[30vh]",
+    description:
+      "Open the google docs that you want to check making sure you have edit access, there should be a insertion on the top right of the google docs that shows you the stats",
+    content: (
+      <div className="flex items-center justify-center w-full h-full text-white">
+        <Image
+          src="/linear.webp"
+          width={300}
+          height={300}
+          className="object-cover w-full h-full"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Detailed Insepection",
+    description: "To get a real time replay of all ",
+    content: (
+      <div className="flex items-center justify-center w-full h-full text-white">
+        <Image
+          src="/linear.webp"
+          width={300}
+          height={300}
+          className="object-cover w-full h-full"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Customizable",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="flex items-center justify-center w-full h-full text-white">
+        <Image
+          src="/linear.webp"
+          width={300}
+          height={300}
+          className="object-cover w-full h-full"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+];
 export default function Home() {
   return (
     <main className="bg-[#F1F6F9] py-20">
@@ -176,7 +240,9 @@ export default function Home() {
       </div>
       <div className="overflow-y-scroll bg-[#F1F6F9] mt-11 no-scrollbar ">
         <h1 className="text-4xl">How to use it</h1>
-        <StickyScroll content={content} />
+        <div className="p-10">
+          <StickyScroll content={content} />
+        </div>
         <div className="max-w-5xl px-8 mx-auto">
           <HoverEffect items={projects} />
         </div>
