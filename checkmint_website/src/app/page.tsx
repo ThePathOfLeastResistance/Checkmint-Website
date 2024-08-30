@@ -145,8 +145,16 @@ export default function Home() {
   return (
     <main className="bg-[#F1F6F9]">
       <div className="flex items-center justify-center h-[80vh]">
-        <div className="circlePosition w-[10vw] h-[40vh] bg-black rounded-full absolute z-1 top-[30%] left-[20%]"></div>
-        <div className="flex flex-col items-center w-3/4 pb-2">
+        <div className=" w-[5vw] h-[45vh] bg-black rounded-full absolute z-1 top-0 left-[10%] -rotate-[75deg] translate-y-[-20%]"></div>
+        <div className=" w-[20vw] h-[20vh] bg-black rounded-full absolute z-1 top-0 left-[40%] -rotate-45 translate-x-[10%]"></div>
+        <div className=" w-[10vw] h-[15vh] bg-black rounded-full absolute z-1 top-0 left-[60%] rotate-45 translate-x-[80%]"></div>
+        <div className=" w-[15vw] h-[20vh] bg-black rounded-full absolute z-1 top-0 left-[90%] translate-x-[10%]"></div>
+        <div className=" w-[20vw] h-[20vh] bg-black rounded-full absolute z-1 top-[60%] left-[80%]  translate-y-[40%] -rotate-45 translate-x-[10%]"></div>
+        <div className=" w-[10vw] h-[30vh] bg-black rounded-full absolute z-1 top-[50%] left-0 -rotate-[75deg] translate-x-[10%] translate-y-[-10%]"></div>
+
+        <div className=" w-[20vw] h-[20vh] bg-black rounded-full absolute z-1 top-[60%] left-[80%]  translate-y-[40%] -rotate-45 translate-x-[10%]"></div>
+
+        <div className="flex flex-col items-center w-3/4 pb-2 mt-40">
           <p className="pb-4 text-6xl black">A Chrome Extension for finding</p>
           <p className="pb-6 text-7xl black">AI/Plagerism </p>
           <p className="w-4/5 pb-4 text-base text-center black text-wrap">
