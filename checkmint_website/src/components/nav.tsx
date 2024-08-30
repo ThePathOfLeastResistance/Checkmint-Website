@@ -4,19 +4,14 @@ export default function Nav() {
   return (
     <main className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
-        <a
+        {/* <a
           href="https://flowbite.com/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          {/* <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Flowbite Logo"
-          /> */}
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Flowbite
-          </span>
-        </a>
+          </h1>
+        </a> */}
         <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
@@ -32,21 +27,6 @@ export default function Nav() {
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
-            {/* <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg> */}
           </button>
         </div>
         <div
