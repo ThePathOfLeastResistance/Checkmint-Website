@@ -143,8 +143,9 @@ const content = [
 ];
 export default function Home() {
   return (
-    <main className="bg-[#F1F6F9] py-20">
+    <main className="bg-[#F1F6F9]">
       <div className="flex items-center justify-center h-[80vh]">
+        <div className="circlePosition w-[10vw] h-[40vh] bg-black rounded-full absolute z-1 top-[30%] left-[20%]"></div>
         <div className="flex flex-col items-center w-3/4 pb-2">
           <p className="pb-4 text-6xl black">A Chrome Extension for finding</p>
           <p className="pb-6 text-7xl black">AI/Plagerism </p>
