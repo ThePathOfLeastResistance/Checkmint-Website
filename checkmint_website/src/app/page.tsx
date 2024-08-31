@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { MacbookScroll } from "../components/macbook";
 import { Compare } from "../components/compare";
-import { StickyScroll } from "../components/scroll-reveal";
 import React from "react";
 import { HoverEffect } from "../components/card-hover";
 
@@ -143,8 +142,8 @@ const content = [
 ];
 export default function Home() {
   return (
-    <main className="bg-[#F1F6F9]">
-      <div className="flex items-center justify-center h-[80vh]">
+    <main className="bg-[#F1F6F9] ">
+      <div className="flex items-center justify-center h-[80vh] w-screen overflow-x-hidden">
         <div className=" w-[10vw] h-[45vh] bg-black rounded-full absolute z-1 top-0 left-0 -rotate-[75deg] translate-y-[-40%] translate-x-[-40%] blur-[110px]"></div>
         <div className=" w-[10vw] h-[10vh] bg-black rounded-full absolute z-1 top-0 left-[40%] -rotate-[5deg] translate-x-[10%] blur-[100px]"></div>
         <div className=" w-[10vw] h-[15vh] bg-black rounded-full absolute z-1 top-0 left-[60%] rotate-45 translate-x-[80%] blur-[110px]"></div>
@@ -248,9 +247,7 @@ export default function Home() {
       </div>
       <div className="overflow-y-scroll bg-[#F1F6F9] mt-11 no-scrollbar ">
         <h1 className="text-4xl">How to use it</h1>
-        <div className="p-10">
-          <StickyScroll content={content} />
-        </div>
+
         <div className="max-w-5xl px-8 mx-auto">
           <HoverEffect items={projects} />
         </div>
