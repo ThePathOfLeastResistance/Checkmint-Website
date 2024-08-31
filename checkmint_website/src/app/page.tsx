@@ -153,7 +153,7 @@ export default function Home() {
         <div className=" w-[10vw] h-[30vh] bg-black rounded-full absolute z-1 top-[60%] left-0 translate-y-[-20%] -rotate-[75deg] blur-[120px]"></div>
         <div className=" w-[20vw] h-[20vh] bg-black rounded-full absolute z-1 top-[80%] left-[80%]  translate-y-[40%] -rotate-45 translate-x-[10%] blur-[110px]"></div>
 
-        <div className="flex flex-col items-center w-3/4 pb-2 mt-52">
+        <div className="flex flex-col items-center w-3/4 pb-2 mt-20">
           <p className="pb-4 text-6xl black">A Chrome Extension for finding</p>
           <p className="pb-6 text-7xl black">AI/Plagerism </p>
           <p className="w-3/5 pb-4 text-base text-center black text-wrap">
