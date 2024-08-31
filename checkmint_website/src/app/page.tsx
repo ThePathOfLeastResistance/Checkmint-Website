@@ -108,6 +108,104 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="sidescroll">
+        <header className="flex items-center justify-between p-3 pb-1">
+          <span className="cursor-pointer" onClick={() => router.push("/")}>
+            <Icon name="description" size="5xl" color="blue" />
+          </span>
+
+          <div className="flex-grow px-2">
+            <div className="flex items-center space-x-3">
+              <H6 color="blueGray">
+                {snapshot?.data()?.filename.toUpperCase()}
+              </H6>
+              <span className="cursor-pointer" ref={buttonRef}>
+                <Icon name="star_outline" size="md" color="gray" />
+              </span>
+              <Tooltips placement="bottom" ref={buttonRef}>
+                <TooltipsContent>Star</TooltipsContent>
+              </Tooltips>
+            </div>
+            <ul className="flex h-8 -ml-1 space-x-1 text-sm text-gray-600 ">
+              <li className="option">File</li>
+              <li className="option">Edit</li>
+              <li className="option">View</li>
+              <li className="option">Insert</li>
+              <li className="option">Format</li>
+              <li className="option">Tools</li>
+              <li className="option">Add-ons</li>
+              <li className="option">help</li>
+            </ul>
+          </div>
+          <Button
+            color="gray"
+            buttonType="link"
+            rounded="md"
+            iconOnly={true}
+            ripple="dark"
+            className="hidden mr-4 md:inline-flex"
+          >
+            <Icon name="comment" size="md" />
+          </Button>
+
+          <Button
+            ref={buttonRef}
+            color="gray"
+            buttonType="outline"
+            rounded="md"
+            iconOnly={true}
+            ripple="dark"
+            className="hidden mr-4 md:inline-flex px-9 hover:bg-gray-100"
+          >
+            <Icon name="present_to_all" size="md" color="blue" />
+            <Icon name="arrow_drop_down" size="sm" color="blue" />
+          </Button>
+          <Tooltips placement="bottom" ref={buttonRef}>
+            <TooltipsContent>Present to meeting</TooltipsContent>
+          </Tooltips>
+          <Button
+            ref={buttonRef}
+            color="lightBlue"
+            buttonType="filled"
+            size="regular"
+            rounded={false}
+            block={false}
+            iconOnly={false}
+            ripple="light"
+            className="hidden h-10 md:inline-flex"
+          >
+            <Icon name="people" size="md" />
+            SHARE
+          </Button>
+
+          <Tooltips placement="bottom" ref={buttonRef}>
+            <TooltipsContent>
+              <span className="flex items-center space-x-2">
+                <Icon name="lock" size="sm" /> <p>Private to only me</p>
+              </span>
+            </TooltipsContent>
+          </Tooltips>
+
+          <img
+            ref={buttonRef}
+            src={session?.user?.image}
+            alt="user-image"
+            className="w-12 h-12 ml-2 rounded-full cursor-pointer"
+            onClick={signOut}
+          />
+        </header>
+        <Tooltips placement="bottom" ref={buttonRef}>
+          <TooltipsContent>
+            <ul>
+              <li>Google Account</li>
+              <li>{session?.user?.name}</li>
+
+              <li>{session?.user?.email}</li>
+            </ul>
+          </TooltipsContent>
+        </Tooltips>
+        <TextEditor />
+      </div>
     </main>
   );
 }
