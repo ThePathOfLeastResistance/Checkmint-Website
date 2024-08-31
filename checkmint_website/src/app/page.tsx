@@ -17,129 +17,6 @@ import { motion } from "framer-motion";
 
 // todo make a better hero than compare, too confusing
 
-const statsContent = [
-  {
-    title: "Download the extension from the chrome store",
-    description:
-      "The google chrome extension works with google Docs to allow you to see the number of edits the student made to see if it matchs with the diffculty of the assigment. Futher more, you can also see the time spent, the number of words copied from a exteral source and so much more.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(#F1F6F9),var(#394867))] flex items-center justify-center text-white">
-        Collaborative Editing
-      </div>
-    ),
-  },
-  {
-    title: "Real time changes",
-    description:
-      "When you Click on the extension button, it will redirect you to a new page to get a more detailed look into the students writing process. You can see what the student copied and pasted, and determine if the student used Ai or not.",
-    content: (
-      <div className="flex items-center justify-center w-full h-full text-white">
-        <Image
-          src="/linear.webp"
-          width={300}
-          height={300}
-          className="object-cover w-full h-full"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Customizable",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
-      </div>
-    ),
-  },
-  {
-    title: "Secure and Safe",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
-      </div>
-    ),
-  },
-  {
-    title: "Intergrated with cutting Edge Ai detection model",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
-      </div>
-    ),
-  },
-];
-const content = [
-  {
-    title: "Download the extension from the chrome store",
-    contentClassName: "py-[30vh]",
-    description:
-      "Head over to the google chrome store or click here to install the chrome extension",
-    content: (
-      <Image
-        src="/linear.webp"
-        width={300}
-        height={300}
-        className="object-cover w-full h-full"
-        alt="linear board demo"
-      />
-    ),
-  },
-  {
-    title: "Open Google Docs",
-    contentClassName: "py-[30vh]",
-    description:
-      "Open the google docs that you want to check making sure you have edit access, there should be a insertion on the top right of the google docs that shows you the stats",
-    content: (
-      <div className="flex items-center justify-center w-full h-full text-white">
-        <Image
-          src="/linear.webp"
-          width={300}
-          height={300}
-          className="object-cover w-full h-full"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Detailed Insepection",
-    description: "To get a real time replay of all ",
-    content: (
-      <div className="flex items-center justify-center w-full h-full text-white">
-        <Image
-          src="/linear.webp"
-          width={300}
-          height={300}
-          className="object-cover w-full h-full"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Customizable",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="flex items-center justify-center w-full h-full text-white">
-        <Image
-          src="/linear.webp"
-          width={300}
-          height={300}
-          className="object-cover w-full h-full"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-];
 export default function Home() {
   return (
     <main className="bg-[#F1F6F9] ">
@@ -183,13 +60,13 @@ export default function Home() {
                   </div>
                   <div className="flex flex-wrap items-start justify-start max-w-sm py-10 mx-auto gap-x-4 gap-y-6">
                     <div className="flex items-center justify-center">
-                      <PlaneIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" />
+                      {/* <PlaneIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" /> */}
                       <span className="text-sm text-neutral-700 dark:text-neutral-300">
                         500+ downloads
                       </span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <ElevatorIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" />
+                      {/* <ElevatorIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" /> */}
                       <span className="text-sm text-neutral-700 dark:text-neutral-300">
                         4.5 stars
                       </span>
@@ -201,19 +78,19 @@ export default function Home() {
                       </span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <FoodIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" />
+                      {/* <FoodIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" /> */}
                       <span className="text-sm text-neutral-700 dark:text-neutral-300">
                         24 hours support
                       </span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <MicIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" />
+                      {/* <MicIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" /> */}
                       <span className="text-sm text-neutral-700 dark:text-neutral-300">
                         Accurate
                       </span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <ParachuteIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" />
+                      {/* <ParachuteIcon className="w-4 h-4 mr-1 text-neutral-700 dark:text-neutral-300" /> */}
                       <span className="text-sm text-neutral-700 dark:text-neutral-300">
                         Customizable
                       </span>
@@ -247,10 +124,6 @@ export default function Home() {
       </div>
       <div className="overflow-y-scroll bg-[#F1F6F9] mt-11 no-scrollbar ">
         <h1 className="text-4xl">How to use it</h1>
-
-        <div className="max-w-5xl px-8 mx-auto">
-          <HoverEffect items={projects} />
-        </div>
       </div>
     </main>
   );
@@ -279,148 +152,3 @@ const VacationIcon = ({ className }: { className?: string }) => {
     </svg>
   );
 };
-
-const ElevatorIcon = ({ className }: { className?: string }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M5 4m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
-      <path d="M10 10l2 -2l2 2" />
-      <path d="M10 14l2 2l2 -2" />
-    </svg>
-  );
-};
-
-const FoodIcon = ({ className }: { className?: string }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M20 20c0 -3.952 -.966 -16 -4.038 -16s-3.962 9.087 -3.962 14.756c0 -5.669 -.896 -14.756 -3.962 -14.756c-3.065 0 -4.038 12.048 -4.038 16" />
-    </svg>
-  );
-};
-
-const MicIcon = ({ className }: { className?: string }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M15 12.9a5 5 0 1 0 -3.902 -3.9" />
-      <path d="M15 12.9l-3.902 -3.899l-7.513 8.584a2 2 0 1 0 2.827 2.83l8.588 -7.515z" />
-    </svg>
-  );
-};
-
-const ParachuteIcon = ({ className }: { className?: string }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M22 12a10 10 0 1 0 -20 0" />
-      <path d="M22 12c0 -1.66 -1.46 -3 -3.25 -3c-1.8 0 -3.25 1.34 -3.25 3c0 -1.66 -1.57 -3 -3.5 -3s-3.5 1.34 -3.5 3c0 -1.66 -1.46 -3 -3.25 -3c-1.8 0 -3.25 1.34 -3.25 3" />
-      <path d="M2 12l10 10l-3.5 -10" />
-      <path d="M15.5 12l-3.5 10l10 -10" />
-    </svg>
-  );
-};
-
-const PlaneIcon = ({ className }: { className?: string }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
-    </svg>
-  );
-};
-
-export const projects = [
-  {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-  },
-  {
-    title: "Netflix",
-    description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
-  },
-  {
-    title: "Google",
-    description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
-  },
-  {
-    title: "Meta",
-    description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
-  },
-  {
-    title: "Amazon",
-    description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
-  },
-  {
-    title: "Microsoft",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
-  },
-];
